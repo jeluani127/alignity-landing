@@ -10,26 +10,23 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap');
         .heading-font { font-family: 'Space Grotesk', sans-serif; }
         .hero-bg { background: radial-gradient(circle at 30% 20%, #0a0a2e 0%, #000000 70%); }
-        .glass { background: rgba(255,255,255,0.07); backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.12); }
+        .glass { background: rgba(255,255,255,0.08); backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.15); }
         .card-hover:hover { transform: translateY(-8px); }
-        .whatsapp-float { animation: pulse 2s infinite; }
-        @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.12); } }
+        
+        /* Botón WhatsApp ajustado para no chocar con tawk.to */
+        .whatsapp-float {
+            animation: pulse 2s infinite;
+            bottom: 90px !important;   /* Movido más arriba */
+            right: 20px;
+            z-index: 60;
+        }
+        
+        @keyframes pulse { 
+            0%, 100% { transform: scale(1); } 
+            50% { transform: scale(1.12); } 
+        }
     </style>
 </head>
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/69dd5fa5e0ef771c362292b3/1jm4br7b6';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
-    
 <body class="bg-[#05050f] text-white overflow-x-hidden">
 
     <!-- HERO -->
@@ -39,22 +36,22 @@ s0.parentNode.insertBefore(s1,s0);
                 <div class="w-2 h-2 bg-[#00f0ff] rounded-full animate-pulse"></div>
                 EXPOFARMA 2026 • CUPOS LIMITADOS
             </div>
-            
+           
             <h1 class="heading-font text-4xl md:text-6xl leading-tight tracking-tight">
                 Implementa IA en tu operación<br>
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#00f0ff] to-[#a855f7]">sin costo inicial</span>
             </h1>
-            
+           
             <p class="mt-6 text-lg md:text-xl text-gray-300">
                 Reduce costos, automatiza procesos y obtén resultados medibles en semanas sin detener tu producción.
             </p>
 
             <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-                <button onclick="document.getElementById('formulario').scrollIntoView({behavior:'smooth'})" 
+                <button onclick="document.getElementById('formulario').scrollIntoView({behavior:'smooth'})"
                         class="bg-gradient-to-r from-[#00f0ff] to-[#a855f7] text-black font-semibold text-lg px-10 py-6 rounded-3xl">
                     Solicitar diagnóstico gratuito
                 </button>
-                <a href="https://wa.me/13463647710?text=Hola%20Alignity%20IQ%20Edge%2C%20quiero%20mi%20diagn%C3%B3stico%20gratuito" 
+                <a href="https://wa.me/13463647710?text=Hola%20Alignity%20IQ%20Edge%2C%20quiero%20mi%20diagn%C3%B3stico%20gratuito"
                    target="_blank"
                    class="border border-white/40 hover:border-white font-semibold text-lg px-10 py-6 rounded-3xl flex items-center gap-3">
                     <i class="fab fa-whatsapp text-2xl"></i> Hablar por WhatsApp
@@ -98,7 +95,7 @@ s0.parentNode.insertBefore(s1,s0);
         </div>
     </section>
 
-    <!-- NUEVA SECCIÓN: CONSEJO TÉCNICO GRATUITO -->
+    <!-- CONSEJO TÉCNICO GRATUITO -->
     <section class="px-5 py-16 bg-black/60">
         <div class="max-w-4xl mx-auto">
             <div class="glass rounded-3xl p-10 md:p-14 text-center">
@@ -109,7 +106,7 @@ s0.parentNode.insertBefore(s1,s0);
                 <p class="text-xl text-gray-300 max-w-2xl mx-auto">
                     No solo implementamos IA. Te damos acceso directo a un <strong>Board de expertos</strong> en manufactura, logística, calidad e ingeniería industrial.
                 </p>
-                
+               
                 <div class="grid md:grid-cols-3 gap-6 mt-12">
                     <div class="text-left">
                         <div class="font-semibold text-[#00f0ff]">Expertos en Planta</div>
@@ -124,7 +121,6 @@ s0.parentNode.insertBefore(s1,s0);
                         <p class="text-sm text-gray-400 mt-2">Incluido en todos nuestros proyectos de IA</p>
                     </div>
                 </div>
-
                 <div class="mt-10 text-sm text-gray-400">
                     “Te acompañamos como si fuéramos parte de tu equipo directivo”
                 </div>
@@ -140,7 +136,7 @@ s0.parentNode.insertBefore(s1,s0);
             <p class="mt-6 text-lg text-gray-300 max-w-md mx-auto">
                 Seleccionamos un proceso crítico de tu planta, implementamos IA y te mostramos resultados reales en semanas.
             </p>
-            <button onclick="document.getElementById('formulario').scrollIntoView({behavior:'smooth'})" 
+            <button onclick="document.getElementById('formulario').scrollIntoView({behavior:'smooth'})"
                     class="mt-10 bg-gradient-to-r from-[#00f0ff] to-[#a855f7] text-black font-semibold px-12 py-6 rounded-3xl text-lg">
                 Reservar mi piloto gratuito ahora
             </button>
@@ -163,12 +159,27 @@ s0.parentNode.insertBefore(s1,s0);
         </div>
     </section>
 
-    <!-- BOTÓN FLOTANTE WHATSAPP -->
-    <a href="https://wa.me/13463647710?text=Hola%20Alignity%20IQ%20Edge%2C%20quiero%20mi%20diagn%C3%B3stico%20gratuito" 
+    <!-- BOTÓN FLOTANTE WHATSAPP (corregido) -->
+    <a href="https://wa.me/13463647710?text=Hola%20Alignity%20IQ%20Edge%2C%20quiero%20mi%20diagn%C3%B3stico%20gratuito"
        target="_blank"
-       class="whatsapp-float fixed bottom-6 right-6 bg-[#25D366] w-16 h-16 rounded-3xl flex items-center justify-center text-4xl shadow-2xl z-50">
+       class="whatsapp-float fixed bg-[#25D366] w-16 h-16 rounded-3xl flex items-center justify-center text-4xl shadow-2xl z-50">
         <i class="fab fa-whatsapp"></i>
     </a>
+
+    <!-- Tawk.to Chatbot -->
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/69dd5fa5e0ef771c362292b3/1jm4br7b6';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
 
     <script>
         function enviarFormulario(e) {
