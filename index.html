@@ -13,11 +13,11 @@
         .glass { background: rgba(255,255,255,0.08); backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.15); }
         .card-hover:hover { transform: translateY(-8px); }
         
-        /* Botón WhatsApp ajustado para no chocar con tawk.to */
+        /* Botón WhatsApp subido más para no chocar con tawk.to */
         .whatsapp-float {
             animation: pulse 2s infinite;
-            bottom: 160px !important;   /* Movido más arriba */
-            right: 120px;
+            bottom: 160px !important;   /* ← Aquí puedes subirlo más (prueba 140px o 160px si hace falta) */
+            right: 200px;
             z-index: 60;
         }
         
@@ -144,25 +144,30 @@
         </div>
     </section>
 
-    <!-- FORMULARIO -->
+    <!-- FORMULARIO MEJORADO -->
     <section id="formulario" class="px-5 py-20 max-w-3xl mx-auto">
         <div class="glass rounded-3xl p-10">
             <h2 class="text-3xl font-semibold text-center mb-8">Agenda tu diagnóstico gratuito</h2>
             <form onsubmit="enviarFormulario(event)" class="space-y-6">
-                <input type="text" placeholder="Nombre completo" required class="w-full bg-white/10 border border-white/20 rounded-2xl px-6 py-5 focus:outline-none">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <input type="text" placeholder="Nombre completo" required class="w-full bg-white/10 border border-white/20 rounded-2xl px-6 py-5 focus:outline-none">
+                    <input type="tel" placeholder="Teléfono / WhatsApp" required class="w-full bg-white/10 border border-white/20 rounded-2xl px-6 py-5 focus:outline-none">
+                </div>
                 <input type="text" placeholder="Nombre de tu empresa" required class="w-full bg-white/10 border border-white/20 rounded-2xl px-6 py-5 focus:outline-none">
                 <input type="text" placeholder="Cargo (ej: Gerente de Producción)" required class="w-full bg-white/10 border border-white/20 rounded-2xl px-6 py-5 focus:outline-none">
+                
                 <button type="submit" class="w-full bg-white text-black font-semibold py-6 rounded-3xl text-lg hover:bg-gray-200">
                     Enviar y agendar diagnóstico
                 </button>
             </form>
+            <p class="text-center text-xs text-gray-400 mt-6">Te contactaremos por WhatsApp en menos de 2 horas</p>
         </div>
     </section>
 
-    <!-- BOTÓN FLOTANTE WHATSAPP (corregido) -->
+    <!-- BOTÓN FLOTANTE WHATSAPP -->
     <a href="https://wa.me/13463647710?text=Hola%20Alignity%20IQ%20Edge%2C%20quiero%20mi%20diagn%C3%B3stico%20gratuito"
        target="_blank"
-       class="whatsapp-float fixed bg-[#25D366] w-16 h-16 rounded-3xl flex items-center justify-center text-4xl shadow-2xl z-50">
+       class="whatsapp-float fixed bg-[#25D366] w-16 h-16 rounded-3xl flex items-center justify-center text-4xl shadow-2xl z-60">
         <i class="fab fa-whatsapp"></i>
     </a>
 
